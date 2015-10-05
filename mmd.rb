@@ -111,7 +111,7 @@ class TraitFile
 		$stderr.puts "#{fn}: Traits start in column #{start_column+1}"
 
 		@data = []
-		while !(line = file.shift).empty?
+		while !(line = file.shift).nil?
 			@data.push(line[start_column..-1].collect{|x| x.to_i})
 		end
 	end
